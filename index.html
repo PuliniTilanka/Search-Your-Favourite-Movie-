@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js Session</title>
+    <meta name="description" content="Search for your favorite movie details using the OMDB API.">
+    <title>Search Your Favourite Movie Details</title>
+    <link rel="stylesheet" href="./index.css" />
 </head>
+
 <body>
     <script src="index.js"></script>
 
-    <input type="text" id="searchbar"/>
-    <button id="searchbutton" onclick="search()">Search</button>
-    <div id="content"></div>
-    <span id="title"></span>
-    <span id="year"></span></br>
-    <span id="plot"></span></br>
-    <span id="genre"></span></br>
-    <span id="imdb"></span></br>
-    <span id="actors"></span></br>
+    <main id="movie">
+        <header>
+            <h1 id="topic">Search Your Favourite Movie Details</h1>
+        </header>
+
+        <section>
+            <input type="text" id="searchbar" placeholder="Enter movie title..." aria-label="Search for a movie" />
+            <button id="searchbutton" onclick="search()" aria-label="Search">Search</button>
+        </section>
+
+        <div id="details" style="display: none;"> <!-- Initially hidden -->
+            <div id="content"></div>
+            <div id="other">
+                <h1 id="title"></h1>
+                <h3 id="year"></h3>
+                <span id="runtime"></span>
+                <span id="plot"></span>
+                <span id="genre"></span>
+                <span id="imdb"></span>
+                <span id="actors"></span>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
